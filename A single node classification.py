@@ -21,12 +21,12 @@ def activation(x):
 #def actication(x):
 #    return 1/(1+np.exp(-x))
 # process of learning
-# total is the list of activation value
-total=0.0
+# sum is the list of activation value
+sum=0.0
 for i in range(8):
     for j in range(4):
-            total+=X[i][j]*W[j]
-    delta=activation(total)
+            sum+=X[i][j]*W[j]
+    delta=activation(sum)
     for j in range(4):        
             W[j]+=0.11*(label[i]-delta)*X[i][j]
     print("Now",i,"weight is",W)
